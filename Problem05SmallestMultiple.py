@@ -6,7 +6,8 @@ What is the smallest positive number that is evenly divisible by all of the numb
 '''
 
 #Doesn't include 11 for optimization
-PRIMES_BETWEEN_TEN_AND_TWENTY = [11, 13, 17, 19]
+#Includes 16 as it's the only non prime that isn't made up of exactly 2 primes from 1-10
+DIVISORS = [13, 16, 17, 19]
 
 def find_smallest_multiple():
     '''Returns smallest multiple of all number 1-20'''
@@ -24,8 +25,7 @@ def find_smallest_multiple():
 def check_if_divisible(number):
     '''checks if number is divisible and returns boolean'''
     #checks if divisble by all primes
-    for j in PRIMES_BETWEEN_TEN_AND_TWENTY:
-
+    for j in DIVISORS:
         #if any primes don't go in evenly, return false.
         if number % j != 0:
             return False
