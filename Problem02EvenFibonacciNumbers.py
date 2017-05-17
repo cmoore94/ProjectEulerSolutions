@@ -12,9 +12,7 @@ def sum_even_fibonacci_numbers():
     '''returns sum of even fibonacci numbers between 1 and 4,000,000'''
 
     #variables to be used
-    first_element = 1
-    second_element = 2
-    temp = 0
+    first_element, second_element = 1, 2
 
     #sum
     sum_of_even_numbered_values = 0
@@ -26,14 +24,7 @@ def sum_even_fibonacci_numbers():
         if second_element % 2 == 0:
             sum_of_even_numbered_values += second_element
 
-        #temp used to keep track of first element
-        temp = first_element
-
-        #first element given value of second element
-        first_element = second_element
-
-        #second element equals the two previous elements
-        second_element = first_element + temp
+        first_element, second_element = second_element, first_element + second_element
 
     #print result.
     print sum_of_even_numbered_values
