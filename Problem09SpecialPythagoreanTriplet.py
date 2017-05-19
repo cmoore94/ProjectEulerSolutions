@@ -23,7 +23,7 @@ def special_pythagorean_triplet():
             side_c_squared = (side_a * side_a) + (side_b * side_b)
 
             #side_c = root(side_c^2)
-            side_c = side_c_squared ** (1/2.0)
+            side_c = side_c_squared ** (1/2.0) #Originally tried to find this myself with a for loop
 
             #if side_c is an integer
             if int(side_c) == side_c:
