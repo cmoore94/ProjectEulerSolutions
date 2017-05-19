@@ -15,8 +15,6 @@ def special_pythagorean_triplet():
 
     #Side_A must be between 1 and 333
     for side_a in range(1, 333):
-
-        #Side_B must be between Side_A and 334
         for side_b in range(side_a+1, 1000):
 
             #C^2 = A^2 + B^2
